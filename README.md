@@ -1,6 +1,18 @@
-# distributedFileServer
+Please follow the testing steps with screenshots in the report for Part 2 and 3. 
+The below instructions are purely supplementary
 
-Part-1: Installation of Virtual box, Linux OS (Ubuntu) on Windows10 host machine.<br/>
-Part-2: Multi-threaded file server that supports UPLOAD, DOWNLOAD, DELETE, and RENAME. <br/>
-Part-3: Dropbox-like synchronized storage service using helper thread.<br/>
-Part-4: Computation server to support add(i, j), sort(arrayA) operations using synchronous, asynchronous and deferred synchronous using RPC.<br/>
+Execution Steps after you have gone through the report:
+
+> cd ProjectPart1           // run the below commands inside the project root directory
+// Make sure "server_side_files" folder exists with same naming convention
+// Make sure "client_side_files" folder exists with same naming convention
+// Create sub Folders and files inside "client_side_files" folder manually
+> python3 rpc_server.py              // it will say “Serving….” in the Terminal1
+> python3 rpc_client.py -h           //  run this command on Terminal2
+> python3 rpc_client.py -l client  
+> python3 rpc_client.py -l server
+> python3 rpc_client.py -u folder1/File1.txt File1upload.txt 
+> python3 rpc_client.py -d File1upload.txt clientFile1upload.txt
+> python3 rpc_client.py -r File1upload.txt File1uploadrename.txt
+> python3 rpc_client.py -del File1uploadrename.txt
+> python3 rpc_client.py -s
